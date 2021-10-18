@@ -1,6 +1,7 @@
 <?php 
 $badWord = $_GET['nome'];
 $frase = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, magnam earum reiciendis pariatur, quis, repellat enim asperiores voluptatibus nam error quo suscipit velit in dolorum harum magni iste inventore laboriosam.";
+$nuovaFrase = str_replace($badWord, '***', $frase)
 
 ?>
 <!DOCTYPE html>
@@ -19,8 +20,10 @@ $frase = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, magn
         La lunghezza della frase è: <?php echo strlen($frase); ?>
     </p>
     <p>
-        <?php echo str_replace($badWord, '***', $frase); ?>
-        La lunghezza della frase è: <?php echo strlen($frase); ?>
+        <?php  echo $nuovaFrase; ?>
+    </p>
+    <p>
+        La lunghezza della frase è: <?php echo strlen($nuovaFrase); ?>
     </p>
     
 </body>
